@@ -7,15 +7,15 @@ services:
       - .env
 
   backend:
-    build: ./backend/
+    image: rdk7777/kittygram_backend
     volumes:
-      - static:/app/static   # <-- ИСПРАВЛЕНО ЗДЕСЬ
+      - static:/app/static
       - media:/app/media
     env_file:
       - .env
 
   frontend:
-    build: ./frontend/
+    image: rdk7777/kittygram_frontend
     command: cp -r /app/build/. /static/ && tail -f /dev/null
     volumes:
       - static:/static
@@ -23,7 +23,7 @@ services:
       - .env
 
   gateway:
-    build: ./nginx/
+    image: rdk7777/kittygram_gateway
     volumes:
       - static:/var/www/static
       - media:/var/www/media
