@@ -10,3 +10,4 @@ pytest-pythonpath==0.7.3
 PyYAML==6.0.1
 gunicorn
 setuptools
+python-dotenv
