@@ -183,5 +183,5 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             🚀 Kittygram успешно задеплоен!
-            👤 Автор: ${{ github.actor }}
+            👤 Автор: ${{ github.actor } 
             🔗 Ссылка: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
